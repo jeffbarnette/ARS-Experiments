@@ -10,9 +10,8 @@ I decided to experiment with their Augmented Random Search V2 Algorithm using Op
 
 ## Features:
 
-* Written in Python 3.x
+* Written in Python 3.5.x
 * Uses Open AI Gym
-* Only requires the standard Python libraries
 
 ## Running the app
 
@@ -21,14 +20,17 @@ I decided to experiment with their Augmented Random Search V2 Algorithm using Op
 Use `pip` to install the app's dependencies.
 
     pip install gym
+    pip install pybullet
 
-You will also need to make sure you are using Python 3.5.x or later.
+Also required is `ffmpeg`. On a Mac, you can install ffmpeg via `brew install ffmpeg`. On most Ubuntu variants, `sudo apt-get install ffmpeg` should do it. On Ubuntu 14.04, however, you'll need to install avconv with `sudo apt-get install libav-tools`.
+
+You will also need to make sure you are using Python 3.8.x or later.
 
 ### Run the app
 
     python ars.py
 
-This process will take quite some time depending on the specs and performance of your computer. Expect to let it run for several hours while the model teaches itself to walk in one direction towards its reward (right edge of the screen). Small video clips of each attempt after training has occurred will be stored in the 'exp/brs/monitor' folder which you can view as the files are saved.
+This process will take quite some time depending on the specs and performance of your computer. Expect to let it run for several hours while the model teaches itself to walk in one direction towards its reward (right edge of the screen). Small video clips of each attempt after training has occurred will be stored in the 'exp/brs/monitor' folder which you can view as the files are saved. It may take a few hundred steps to be completed before you will see any readable output in the monitor.
 
 ### Further Experimentation
 
